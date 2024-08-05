@@ -21,6 +21,9 @@ def main():
     # Calculate total minutes from date of birth to today
     collective_mins = get_collective_mins(dob, date.today())
 
+    # Convert the number of minutes to words
+    mins_to_words = p.number_to_words(collective_mins, andword="").capitalize()
+
 
 if __name__ == 'main':
     main()
