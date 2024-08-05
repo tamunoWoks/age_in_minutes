@@ -24,6 +24,9 @@ def main():
     # Convert the number of minutes to words
     mins_to_words = p.number_to_words(collective_mins, andword="").capitalize()
 
+    # Get the plural form of "minute"
+    pluralize_mins = p.plural("minute", collective_mins)
+
 
 if __name__ == 'main':
     main()
