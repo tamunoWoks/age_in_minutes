@@ -30,6 +30,20 @@ def main():
     # Print the result
     print(f"You have lived '{mins_to_words} {pluralize_mins}'")
 
+def get_collective_mins(dob, today):
+    """
+    Calculate the total number of minutes between the date of birth and today.
+
+    Args:
+        dob (date): The date of birth.
+        today (date): The current date.
+
+    Returns:
+        int: Total minutes between the two dates.
+    """
+    
+    return (today - dob).days * 24 * 60
+
 
 if __name__ == 'main':
     main()
