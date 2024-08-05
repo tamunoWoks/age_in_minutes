@@ -27,6 +27,9 @@ def main():
     # Get the plural form of "minute"
     pluralize_mins = p.plural("minute", collective_mins)
 
+    # Print the result
+    print(f"You have lived '{mins_to_words} {pluralize_mins}'")
+
 
 if __name__ == 'main':
     main()
