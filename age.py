@@ -18,6 +18,9 @@ def main():
     # Create an inflect engine instance for converting numbers to words
     p = inflect.engine()
 
+    # Calculate total minutes from date of birth to today
+    collective_mins = get_collective_mins(dob, date.today())
+
 
 if __name__ == 'main':
     main()
