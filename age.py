@@ -15,5 +15,9 @@ def main():
         # Exit the program with an error message if input is invalid
         sys.exit(f"Invalid Input: {e}")
 
+    # Create an inflect engine instance for converting numbers to words
+    p = inflect.engine()
+
+
 if __name__ == 'main':
     main()
