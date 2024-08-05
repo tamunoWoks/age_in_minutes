@@ -16,3 +16,6 @@ def test_get_mins():
 
     # Future case: Start date is in the future
     assert get_collective_mins(date(2100, 1, 1), date(2101, 1, 1)) == 527040
+
+    # Invalid range: End date is before start date (if your function can handle this)
+    assert get_collective_mins(date(2000, 1, 1), date(1999, 1, 1)) == -525600
