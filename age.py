@@ -2,6 +2,7 @@ from datetime import date
 import inflect
 import sys
 
+
 def main():
     try:
         # Prompt user for date of birth in YYYY-MM-DD format
@@ -10,7 +11,7 @@ def main():
         # Check if the date of birth is not in the future
         if dob > date.today():
             raise ValueError("Date of Birth cannot be in the future.")
-        
+
     except ValueError as e:
         # Exit the program with an error message if input is invalid
         sys.exit(f"Invalid Input: {e}")
@@ -30,6 +31,7 @@ def main():
     # Print the result
     print(f"You have lived '{mins_to_words} {pluralize_mins}'")
 
+
 def get_collective_mins(dob, today):
     """
     Calculate the total number of minutes between the date of birth and today.
@@ -41,9 +43,9 @@ def get_collective_mins(dob, today):
     Returns:
         int: Total minutes between the two dates.
     """
-    
+
     return (today - dob).days * 24 * 60
 
 
-if __name__ == 'main':
+if __name__ == "main":
     main()
