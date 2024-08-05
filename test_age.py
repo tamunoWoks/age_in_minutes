@@ -13,3 +13,6 @@ def test_get_mins():
 
     # Leap year case: From January 1, 2000 to January 1, 2001 (including Feb 29)
     assert get_collective_mins(date(2000, 1, 1), date(2001, 1, 1)) == 527040
+
+    # Future case: Start date is in the future
+    assert get_collective_mins(date(2100, 1, 1), date(2101, 1, 1)) == 527040
